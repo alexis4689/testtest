@@ -4,6 +4,16 @@
 <meta charset = "utf-8">
 <style> body {background:black} </style> 
 </head>
+	<script type="text/javascript">
+		Array.prototype.forEach.call(document.querySelectorAll('.key li'), function(li){
+			li.addEventListener('mouseenter', function(){
+				document.body.classList.add('hover-'+this.className);
+			});
+			li.addEventListener('mouseleave', function(){
+				document.body.classList.remove('hover-'+this.className);
+			});
+		});
+	</script>
 <body>
 		<main>
 			<h1>Periodic table of HTML elements</h1>
